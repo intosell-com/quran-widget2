@@ -1,0 +1,98 @@
+*{box-sizing:border-box}
+:root{
+  --bg:#f8f1e7;
+  --card:#fffaf1;
+  --ink:#17251f;
+  --muted:#68766d;
+  --accent:#0f6b56;
+  --gold:#d6a84f;
+  --border:rgba(15,107,86,.18);
+  --shadow:0 24px 70px rgba(24,45,36,.14);
+}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Tahoma,Arial,sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 15% 0%,rgba(214,168,79,.24),transparent 32%),
+    radial-gradient(circle at 85% 12%,rgba(15,107,86,.15),transparent 34%),
+    linear-gradient(135deg,#fcf8ef,#f1e8d9);
+}
+button,a{font:inherit}
+code{direction:ltr;unicode-bidi:embed;background:rgba(15,107,86,.08);border:1px solid var(--border);border-radius:8px;padding:.08rem .35rem}
+.page-shell{width:min(1120px,calc(100% - 32px));margin:auto;padding:32px 0 56px}
+.hero{
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  gap:24px;
+  align-items:stretch;
+  margin:18px 0 34px;
+}
+.hero-content,.hero-card,.section,.cards article,.quran-widget{
+  background:rgba(255,250,241,.86);
+  border:1px solid var(--border);
+  border-radius:28px;
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(10px);
+}
+.hero-content{padding:42px}
+.eyebrow{margin:0 0 10px;color:var(--accent);font-weight:700;letter-spacing:-.02em}
+h1{font-size:clamp(2rem,5vw,4.2rem);line-height:1.18;margin:0 0 20px}
+.lead{font-size:1.08rem;line-height:2;color:var(--muted);margin:0 0 26px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:999px;padding:12px 20px;border:1px solid var(--border);font-weight:700}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{color:var(--accent);background:#fff8ec}
+.hero-card{padding:34px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;position:relative}
+.hero-card:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(214,168,79,.19);top:-70px;right:-70px}
+.symbol{font-size:4.2rem;color:var(--gold);line-height:1}
+.hero-card p{font-size:1.25rem;line-height:2.1;margin:18px 0 0;position:relative}
+.section{padding:28px;margin:24px 0}
+.section-title h2{margin:0 0 18px;font-size:1.65rem}
+.quran-widget{max-width:820px;margin:auto;padding:18px}
+.quran-widget-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.badge{background:rgba(214,168,79,.18);color:#7b5920;border:1px solid rgba(214,168,79,.35);border-radius:999px;padding:8px 13px;font-weight:700}
+.refresh{
+  border:0;
+  background:var(--accent);
+  color:#fff;
+  border-radius:999px;
+  padding:10px 15px;
+  cursor:pointer;
+  font-weight:700;
+}
+.refresh:hover,.btn.primary:hover{filter:brightness(.96)}
+.image-wrap{
+  min-height:230px;
+  border-radius:22px;
+  border:1px dashed rgba(15,107,86,.25);
+  background:linear-gradient(180deg,#fffdf8,#fbf3e5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  padding:14px;
+}
+.image-wrap img{display:block;max-width:100%;height:auto;border-radius:16px}
+.loader{color:var(--muted);text-align:center;line-height:2}
+.meta{margin:12px 4px 0;color:var(--muted);font-size:.92rem;text-align:center;direction:rtl}
+.help{color:var(--muted);line-height:2}
+.code-card{position:relative;background:#10271f;color:#eef9f4;border-radius:20px;padding:18px;margin:12px 0;overflow:auto;direction:ltr;text-align:left}
+pre{margin:0;white-space:pre-wrap;word-break:break-word}
+.copy{position:absolute;top:10px;right:10px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.12);color:#fff;border-radius:999px;padding:7px 12px;cursor:pointer}
+details{margin-top:16px;border:1px solid var(--border);border-radius:18px;padding:14px;background:rgba(255,255,255,.4)}
+summary{cursor:pointer;font-weight:700;color:var(--accent)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.cards article{padding:24px}
+.cards h3{margin:0 0 10px}
+.cards p{color:var(--muted);line-height:1.9;margin:0}
+.error{color:#8b1d1d}
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr}
+  .hero-content{padding:28px}
+  .cards{grid-template-columns:1fr}
+  .quran-widget-top{align-items:flex-start;flex-direction:column}
+  .refresh{width:100%}
+}

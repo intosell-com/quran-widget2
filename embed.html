@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>آیه تصادفی قرآن</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    body{background:transparent;min-height:auto;margin:0;padding:0}
+    .embed-shell{padding:10px}
+    .quran-widget{max-width:100%;margin:0}
+    .image-wrap{min-height:150px}
+  </style>
+</head>
+<body>
+  <div class="embed-shell">
+    <div class="quran-widget" data-quran-box>
+      <div class="quran-widget-top">
+        <span class="badge">آیه تصادفی</span>
+        <button type="button" class="refresh" data-next-ayah>آیه دیگر</button>
+      </div>
+      <div class="image-wrap">
+        <div class="loader" data-loader>در حال بارگذاری...</div>
+        <img data-ayah-image alt="تصویر آیه قرآن" loading="lazy" hidden>
+      </div>
+      <p class="meta" data-meta>—</p>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

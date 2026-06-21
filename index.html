@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>نمایش تصادفی آیات قرآن</title>
+  <meta name="description" content="ابزار بدون سرور برای نمایش تصادفی آیات قرآن به صورت عکس در سایت یا وبلاگ.">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">ابزار قرآنی بدون سرور</p>
+        <h1>نمایش تصادفی آیات قرآن در سایت یا وبلاگ</h1>
+        <p class="lead">
+          این برنامه آدرس عکس‌ها را از فایل <code>quran.txt</code> می‌خواند و در هر بار بارگذاری، یک تصویر را به صورت تصادفی نمایش می‌دهد.
+          کافی است پروژه را روی GitHub Pages منتشر کنید و کد اشتراک‌گذاری را در سایت دیگر قرار دهید.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#demo">دیدن نمونه</a>
+          <a class="btn ghost" href="#share">کد اشتراک‌گذاری</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="آیه">
+        <div class="symbol">۞</div>
+        <p>وَذَكِّرْ فَإِنَّ الذِّكْرَىٰ تَنفَعُ الْمُؤْمِنِينَ</p>
+      </aside>
+    </section>
+
+    <section id="demo" class="section">
+      <div class="section-title">
+        <p class="eyebrow">پیش‌نمایش</p>
+        <h2>نمونه نمایش آیه تصادفی</h2>
+      </div>
+
+      <div class="quran-widget" data-quran-box>
+        <div class="quran-widget-top">
+          <span class="badge">آیه تصادفی</span>
+          <button type="button" class="refresh" data-next-ayah>نمایش آیه دیگر</button>
+        </div>
+        <div class="image-wrap">
+          <div class="loader" data-loader>در حال خواندن quran.txt...</div>
+          <img data-ayah-image alt="تصویر آیه قرآن" loading="lazy" hidden>
+        </div>
+        <p class="meta" data-meta>—</p>
+      </div>
+    </section>
+
+    <section id="share" class="section">
+      <div class="section-title">
+        <p class="eyebrow">اشتراک‌گذاری</p>
+        <h2>کد نمایش در سایت یا وبلاگ دیگر</h2>
+      </div>
+      <p class="help">
+        پس از فعال شدن GitHub Pages، کد زیر را کپی کنید و در سایت یا وبلاگ مقصد قرار دهید.
+        در نسخه منتشرشده، آدرس به صورت خودکار بر اساس همان دامنه GitHub Pages ساخته می‌شود.
+      </p>
+
+      <div class="code-card">
+        <button type="button" class="copy" data-copy="#shareCode">کپی</button>
+        <pre><code id="shareCode"></code></pre>
+      </div>
+
+      <details>
+        <summary>کد جایگزین با iframe</summary>
+        <div class="code-card">
+          <button type="button" class="copy" data-copy="#iframeCode">کپی</button>
+          <pre><code id="iframeCode"></code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="cards">
+      <article>
+        <h3>بدون دیتابیس و سرور</h3>
+        <p>همه چیز با HTML، CSS، JavaScript و فایل متنی quran.txt اجرا می‌شود.</p>
+      </article>
+      <article>
+        <h3>مناسب GitHub Pages</h3>
+        <p>فایل‌ها را در مخزن بگذارید، Pages را فعال کنید و لینک را در اختیار دیگران قرار دهید.</p>
+      </article>
+      <article>
+        <h3>قابل استفاده در سایت‌های دیگر</h3>
+        <p>کد <code>widget.js</code> به صورت خودکار یک قاب امن و زیبا ایجاد می‌کند.</p>
+      </article>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
