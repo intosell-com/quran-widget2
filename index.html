@@ -48,10 +48,89 @@
         <p class="eyebrow">اشتراک‌گذاری</p>
         <h2>کد نمایش در سایت یا وبلاگ دیگر</h2>
       </div>
-      <p class="help">
-        پس از فعال شدن GitHub Pages، کد زیر را کپی کنید و در سایت یا وبلاگ مقصد قرار دهید.
-        در نسخه منتشرشده، آدرس به صورت خودکار بر اساس همان دامنه GitHub Pages ساخته می‌شود.
-      </p>
+<div class="support-box">
+  <a href="https://payping.ir/@ayntvsl" target="_blank" rel="noopener noreferrer" class="support-btn pay-btn">
+    <span class="support-icon">💛</span>
+    حمایت مالی از ما
+  </a>
+
+  <a href="https://www.intosell.com/fa/v/149366/%D8%AD%D9%85%D8%A7%DB%8C%D8%AA-%D8%A7%D8%B2-%D9%BE%D8%B1%D9%88%DA%98%D9%87-%D9%87%D8%A7%DB%8C-%D8%AA%D9%88%D8%B3%D8%B9%D9%87-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A7%DB%8C%D9%86%D8%AA%D9%88%D8%B3%D9%84" target="_blank" rel="noopener noreferrer" class="support-btn intosell-btn">
+    <span class="support-icon">🚀</span>
+    حمایت برنامه‌های توسعه ایران اینتوسل
+  </a>
+</div>
+
+<style>
+  .support-box {
+    text-align: center;
+    margin: 30px auto;
+    direction: rtl;
+    font-family: "Tahoma", "Vazirmatn", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .support-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.8;
+    transition: all 0.3s ease;
+    border: none;
+  }
+
+  .pay-btn {
+    background: linear-gradient(135deg, #ffb703, #fb8500);
+    box-shadow: 0 8px 20px rgba(251, 133, 0, 0.35);
+  }
+
+  .intosell-btn {
+    background: linear-gradient(135deg, #0077ff, #00b4d8);
+    box-shadow: 0 8px 20px rgba(0, 119, 255, 0.35);
+  }
+
+  .support-btn:hover {
+    transform: translateY(-3px);
+    color: #ffffff;
+  }
+
+  .pay-btn:hover {
+    background: linear-gradient(135deg, #fb8500, #ffb703);
+    box-shadow: 0 12px 28px rgba(251, 133, 0, 0.5);
+  }
+
+  .intosell-btn:hover {
+    background: linear-gradient(135deg, #00b4d8, #0077ff);
+    box-shadow: 0 12px 28px rgba(0, 119, 255, 0.5);
+  }
+
+  .support-icon {
+    font-size: 22px;
+  }
+
+  @media (max-width: 600px) {
+    .support-box {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .support-btn {
+      width: 90%;
+      max-width: 360px;
+      font-size: 16px;
+      padding: 13px 20px;
+    }
+  }
+</style>
 
       <div class="code-card">
         <button type="button" class="copy" data-copy="#shareCode">کپی</button>
